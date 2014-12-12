@@ -2,8 +2,8 @@
     <h1 mean-token="'home-default'">WorkAside</h1>
     <div >
     	<ul>
-    		<li ng-repeat="movie in movies">
-    			<p>{{movie.name}}</p>
+    		<li ng-repeat="movie in movies.value">
+    			<p ng-click="remove(movie)">{{movie.name}}</p>
     		</li>
     	</ul>
     	<form ng-submit="addMovie()">

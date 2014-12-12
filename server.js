@@ -32,3 +32,4 @@ exports = module.exports = app;
 
 app.post('/api/movies', moviesController.create);
 app.get('/api/movies', moviesController.list);
+app.delete('/api/movies', moviesController.remove);
