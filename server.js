@@ -5,7 +5,8 @@
  */
 var mongoose = require('mongoose'),
     passport = require('passport'),
-    logger = require('mean-logger');
+    logger = require('mean-logger'),
+    moviesController = require('./server/controllers/movies-controller');
 
 /**
  * Main application entry file.
@@ -28,3 +29,6 @@ logger.init(app, passport, mongoose);
 
 // Expose app
 exports = module.exports = app;
+
+app.post('/api/movies', moviesController.create);
+app.get('/api/movies', moviesController.list);

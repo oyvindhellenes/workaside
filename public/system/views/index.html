@@ -1,3 +1,15 @@
 <section data-ng-controller="IndexController">
-    <h1 mean-token="'home-default'">This is the home view</h1>
+    <h1 mean-token="'home-default'">WorkAside</h1>
+    <div >
+    	<ul>
+    		<li ng-repeat="movie in movies">
+    			<p>{{movie.name}}</p>
+    		</li>
+    	</ul>
+    	<form ng-submit="addMovie()">
+    		<input type="text" placeholder="Enter name of movie" ng-model="movieName">
+    		<button type="submit">Add</button>
+    	</form>	
+
+    </div>
 </section>
