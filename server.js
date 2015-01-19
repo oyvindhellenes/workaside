@@ -36,8 +36,8 @@ exports = module.exports = app;
 app.post('/api/problems', problemsController.create);
 
 // Get problems
+app.get('/api/problems', problemsController.list);
 
 // Delete problems
-
-app.get('/api/problems', problemsController.list);
 app.delete('/api/problems', problemsController.remove);
+

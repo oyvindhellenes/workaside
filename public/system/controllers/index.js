@@ -14,6 +14,8 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
 
     $scope.global = Global;
 
+    console.log('global: ' + angular.toJson($scope.global));
+
     $scope.problemName = "";
 
     $scope.addProblem = function(){

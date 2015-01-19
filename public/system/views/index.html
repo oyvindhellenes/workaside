@@ -1,7 +1,9 @@
 <section data-ng-controller="IndexController">
     <h1 mean-token="'home-default'">Web RTC Support</h1>
+    <p>Currently logged in as {{global.user.name}}</p>
+    
     <iframe src="https://appear.in/hellenes" width="400" height="300" frameborder="0"></iframe>
-    <div >
+    <div>
     	<form ng-submit="addProblem()">
     		<input type="text" placeholder="Submit a problem" ng-model="problemName">
     		<button type="submit">Add</button>
