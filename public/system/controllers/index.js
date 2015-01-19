@@ -2,30 +2,33 @@
 
 angular.module('mean.system').controller('IndexController', ['$scope', 'Global','$resource', function ($scope, Global, $resource) {
     
-	var Movie = $resource('/api/movies');
-    $scope.movies = {
+	var Problem = $resource('/api/problems');
+    $scope.problems = {
         value: ""
     }
 
-	Movie.query(function (results) {
-		$scope.movies.value = results;
+	Problem.query(function (results) {
+		$scope.problems.value = results;
+        console.log('test' + angular.toJson($scope.problems.value));
 	});
 
     $scope.global = Global;
 
-    $scope.movieName = "";
+    $scope.problemName = "";
 
-    $scope.addMovie = function(){
-    	var movie = new Movie();
-    	movie.name = $scope.movieName;
-    	movie.$save(function (req, res){
-            $scope.movies.value.push(res);
+    $scope.addProblem = function(){
+    	var problem = new Problem();
+    	problem.name = $scope.problemName;
+    	problem.$save(function (req, res){
+            $scope.problems.value.push(res);
         });
-    	$scope.movieName = "";
+    	$scope.problemName = "";
+
+        console.log('test' + angular.toJson($scope.problemName));
     }
 
-    $scope.remove = function(mov){
-        var movie = new Movie();
-        movie.$delete(mov);
+    $scope.removeProblem = function(prob){
+        var problem = new Problem();
+        problem.$delete(prob);
     }
 }]);

@@ -40,3 +40,11 @@ footer {
 footer p {
     padding:5px 0 12px 10px
 }
+
+span:hover {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}

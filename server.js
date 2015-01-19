@@ -6,7 +6,7 @@
 var mongoose = require('mongoose'),
     passport = require('passport'),
     logger = require('mean-logger'),
-    moviesController = require('./server/controllers/movies-controller');
+    problemsController = require('./server/controllers/problems-controller');
 
 /**
  * Main application entry file.
@@ -30,6 +30,14 @@ logger.init(app, passport, mongoose);
 // Expose app
 exports = module.exports = app;
 
-app.post('/api/movies', moviesController.create);
-app.get('/api/movies', moviesController.list);
-app.delete('/api/movies', moviesController.remove);
+// API
+
+// Post problem
+app.post('/api/problems', problemsController.create);
+
+// Get problems
+
+// Delete problems
+
+app.get('/api/problems', problemsController.list);
+app.delete('/api/problems', problemsController.remove);

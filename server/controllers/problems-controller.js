@@ -1,26 +1,29 @@
-var Movie = require('../models/movies');
+var Problem = require('../models/problems');
+var util = require('util');
 
 module.exports.create = function(req, res){
-	var movie = new Movie(req.body);
+	var problem = new Problem(req.body);
 
-	movie.save(function (err, result){
+	problem.save(function (err, result){
 		res.json(result);
 	});
 
 }
 
 module.exports.list = function(req, res) {
-	Movie.find({}, function (err, results){
+	Problem.find({}, function (err, results){
 		res.json(results);
 	});
 }
 
 module.exports.remove = function(req, res) {
-	Movie.find({}, function (req, results) {
-		console.log('res' + res.id);
+
+	console.log(util.inspect(req.query, false, null));
+
+	Problem.find({}, function (err, results) {
 		for (i in results){
-			console.log('results' + results[i].id);
-			if (results[i].id == '548b4e3ea16707861e016ac1') {
+
+			if (results[i].id == req.query._id) {
 				results[i].remove(function (err){
 					if (!err) {
 					    console.log("removed");

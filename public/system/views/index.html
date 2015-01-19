@@ -1,15 +1,16 @@
 <section data-ng-controller="IndexController">
-    <h1 mean-token="'home-default'">WorkAside</h1>
+    <h1 mean-token="'home-default'">Web RTC Support</h1>
+    <iframe src="https://appear.in/hellenes" width="400" height="300" frameborder="0"></iframe>
     <div >
-    	<ul>
-    		<li ng-repeat="movie in movies.value">
-    			<p ng-click="remove(movie)">{{movie.name}}</p>
-    		</li>
-    	</ul>
-    	<form ng-submit="addMovie()">
-    		<input type="text" placeholder="Enter name of movie" ng-model="movieName">
+    	<form ng-submit="addProblem()">
+    		<input type="text" placeholder="Submit a problem" ng-model="problemName">
     		<button type="submit">Add</button>
     	</form>	
+        <ul>
+            <li ng-repeat="problem in problems.value">
+                <p>{{problem.name}} <span class="glyphicon glyphicon-remove" ng-click="removeProblem(problem)"></span></p>
+            </li>
+        </ul>
 
     </div>
 </section>
