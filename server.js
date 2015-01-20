@@ -6,7 +6,8 @@
 var mongoose = require('mongoose'),
     passport = require('passport'),
     logger = require('mean-logger'),
-    problemsController = require('./server/controllers/problems-controller');
+    problemsController = require('./server/controllers/problems-controller'),
+    usersController = require('./server/controllers/users');
 
 /**
  * Main application entry file.
@@ -41,3 +42,5 @@ app.get('/api/problems', problemsController.list);
 // Delete problems
 app.delete('/api/problems', problemsController.remove);
 
+// Get user by id
+app.get('/api/user', usersController.user);

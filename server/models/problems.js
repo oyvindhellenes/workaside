@@ -1,5 +1,10 @@
 var mongoose = require('mongoose');
 
-module.exports = mongoose.model('Problem', {
-	name: String
+var Schema = mongoose.Schema;
+
+var problemSchema = new Schema({
+	name: String,
+	userid: String 
 });
+
+module.exports = mongoose.model('Problem', problemSchema);

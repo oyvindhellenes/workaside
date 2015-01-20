@@ -1,8 +1,8 @@
 <section data-ng-controller="IndexController">
     <h1 mean-token="'home-default'">Web RTC Support</h1>
-    <p>Currently logged in as {{global.user.name}}</p>
-    
-    <iframe src="https://appear.in/hellenes" width="400" height="300" frameborder="0"></iframe>
+    <p>Currently logged in as {{global.user._id}}</p>
+
+   <!--  <iframe src="https://appear.in/hellenes" width="400" height="300" frameborder="0"></iframe> -->
     <div>
     	<form ng-submit="addProblem()">
     		<input type="text" placeholder="Submit a problem" ng-model="problemName">
@@ -10,7 +10,7 @@
     	</form>	
         <ul>
             <li ng-repeat="problem in problems.value">
-                <p>{{problem.name}} <span class="glyphicon glyphicon-remove" ng-click="removeProblem(problem)"></span></p>
+                <p>{{problem.name}} by <span class="glyphicon glyphicon-remove" ng-click="removeProblem(problem)"></span></p>
             </li>
         </ul>
 
