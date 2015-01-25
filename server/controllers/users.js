@@ -3,8 +3,9 @@
 /**
  * Module dependencies.
  */
-var mongoose = require('mongoose'),
-    User = mongoose.model('User');
+var mongoose = require('mongoose');
+
+var User = require('../models/user');
 
 /**
  * Auth callback
