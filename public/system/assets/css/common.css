@@ -48,3 +48,11 @@ span:hover {
 li {
     list-style-type: none;
 }
+
+#jumbo1 {
+    height: 500px;
+}
+
+#jumbo4 {
+    height: 250px;
+}

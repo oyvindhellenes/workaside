@@ -9,9 +9,6 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
         value: ""
     }
 
-    $scope.userObj = ""
-
-
 	Problem.query(function (results) {
 		$scope.problems.value = results;
         console.log('test' + angular.toJson($scope.problems.value));
@@ -19,10 +16,6 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
 
     $scope.global = Global;
 
-    User.query($scope.global.user._id, function (results){
-        $scope.userObj = results;
-        console.log('test' + angular.toJson(results));
-    })
 
     console.log('global: ' + angular.toJson($scope.global));
 

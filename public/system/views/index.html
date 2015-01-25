@@ -1,18 +1,43 @@
 <section data-ng-controller="IndexController">
-    <h1 mean-token="'home-default'">Web RTC Support</h1>
-    <p>Currently logged in as {{global.user._id}}</p>
+    
 
-   <!--  <iframe src="https://appear.in/hellenes" width="400" height="300" frameborder="0"></iframe> -->
     <div>
-    	<form ng-submit="addProblem()">
-    		<input type="text" placeholder="Submit a problem" ng-model="problemName">
-    		<button type="submit">Add</button>
-    	</form>	
-        <ul>
-            <li ng-repeat="problem in problems.value">
-                <p>{{problem.name}} by <span class="glyphicon glyphicon-remove" ng-click="removeProblem(problem)"></span></p>
-            </li>
-        </ul>
+
+        <div class="col-md-4">
+            <div class="jumbotron" id="jumbo1">
+                <h2>Inspiration of the Day</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="jumbotron" id="jumbo2">
+                <h2>Core Values</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="jumbotron" id="jumbo3">
+                <h2>Mission statement</h2>
+            </div>
+        </div>
+    </div>
+    <div>
+
+        <div class="col-md-8">
+            <div class="jumbotron" id="jumbo4">
+                <h2>Employees</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="jumbotron" id="jumbo5">
+                <h2>Goal of the Week</h2>
+            </div>
+        </div>
+    </div>
+    <div>
+        <form ng-submit="addProblem()">
+            <input type="text" placeholder="Submit a problem" ng-model="problemName">
+            <button type="submit">Add</button>
+        </form> 
 
     </div>
+
 </section>
