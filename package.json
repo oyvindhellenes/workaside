@@ -5,11 +5,26 @@
   "private": false,
   "author": "Linnovate <mean@linnovate.net>",
   "contributors": [
-    { "name": "Lior Kesos", "mail": "lior@linnovate.net" },
-    { "name": "Yonatan Ellman", "mail": "yonatan@linnovate.net" },
-    { "name": "Ehud Shahak", "mail": "ehud@linnovate.net" },
-    { "name": "Amos Haviv", "mail": "mail@amoshaviv" },
-    { "name": "Drew Fyock", "mail": "drew@steelbisondev.com" }
+    {
+      "name": "Lior Kesos",
+      "mail": "lior@linnovate.net"
+    },
+    {
+      "name": "Yonatan Ellman",
+      "mail": "yonatan@linnovate.net"
+    },
+    {
+      "name": "Ehud Shahak",
+      "mail": "ehud@linnovate.net"
+    },
+    {
+      "name": "Amos Haviv",
+      "mail": "mail@amoshaviv"
+    },
+    {
+      "name": "Drew Fyock",
+      "mail": "drew@steelbisondev.com"
+    }
   ],
   "repository": {
     "type": "git",
@@ -71,6 +86,7 @@
   },
   "devDependencies": {
     "assetmanager": "^0.1.2",
+    "flightplan": "^0.5.6",
     "grunt-karma": "~0.8.2",
     "grunt-mocha-test": "~0.10.2",
     "karma": "~0.12.10",
