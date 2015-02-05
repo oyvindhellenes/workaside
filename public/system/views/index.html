@@ -1,43 +1,52 @@
 <section data-ng-controller="IndexController">
     
-
+    <form ng-submit="addWall()">
+    <p>Project name: {{wall.value[0].name}}</p>
+    <input type="text" placeholder="Name" ng-model="wallElements.name">
     <div>
 
         <div class="col-md-4">
             <div class="jumbotron" id="jumbo1">
                 <h2>Inspiration of the Day</h2>
+                <p>{{wall.value.iotd[0].name}}</p>
             </div>
+            <input type="text" placeholder="Submit a problem" ng-model="wallElements.iotd[0].name">
         </div>
         <div class="col-md-4">
             <div class="jumbotron" id="jumbo2">
-                <h2>Core Values</h2>
+                <h2>links</h2>
+                <p>{{wall.value.links[0]}}</p>
             </div>
+            <input type="text" placeholder="Submit a problem" ng-model="wallElements.links[0].name">
         </div>
         <div class="col-md-4">
             <div class="jumbotron" id="jumbo3">
-                <h2>Mission statement</h2>
+                <h2>Why</h2>
+                <p>{{wall.value.why}}</p>
             </div>
+            <input type="text" placeholder="Submit a problem" ng-model="wallElements.why">
         </div>
     </div>
     <div>
 
         <div class="col-md-8">
             <div class="jumbotron" id="jumbo4">
-                <h2>Employees</h2>
+                <h2>What</h2>
+                <p>{{wall.value.what}}</p>
             </div>
+            <input type="text" placeholder="Submit a problem" ng-model="wallElements.what">
         </div>
         <div class="col-md-4">
             <div class="jumbotron" id="jumbo5">
                 <h2>Goal of the Week</h2>
+                <p>{{wall.value.gotw[0].name}}</p>
             </div>
+            <input type="text" placeholder="Submit a problem" ng-model="wallElements.gotw[0].task">
         </div>
     </div>
     <div>
-        <form ng-submit="addProblem()">
-            <input type="text" placeholder="Submit a problem" ng-model="problemName">
-            <button type="submit">Add</button>
-        </form> 
-
+        <button type="submit">Add</button>
     </div>
+    </form> 
 
 </section>

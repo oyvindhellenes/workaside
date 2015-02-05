@@ -7,7 +7,8 @@ var mongoose = require('mongoose'),
     passport = require('passport'),
     logger = require('mean-logger'),
     problemsController = require('./server/controllers/problems-controller'),
-    usersController = require('./server/controllers/users');
+    usersController = require('./server/controllers/users'),
+    wallController = require('./server/controllers/wall-controller');
 
 /**
  * Main application entry file.
@@ -32,6 +33,12 @@ logger.init(app, passport, mongoose);
 exports = module.exports = app;
 
 // API
+
+// Create new wall
+app.post('/api/wall', wallController.create);
+
+// Get wall
+app.get('/api/wall', wallController.get);
 
 // Post problem
 app.post('/api/problems', problemsController.create);

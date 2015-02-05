@@ -1,0 +1,40 @@
+[
+	{
+		"id": "32",
+		"name": "Biswiz",
+		"ioth": [
+			{
+				"name": "Bill Gates",
+				"imageUrl": "public/system/assets/img/billgates.pdf",
+				"qoute": "It's fine to celebrate success but it is more important to heed the lessons of failure.",
+			},
+			{
+				"name": "David Lynch",
+				"imageUrl": "public/system/assets/img/davidlynch.pdf",
+				"qoute": "Negativity is the enemy of creativity."
+			},
+
+		],
+		"gotw": [
+			{
+				"task": "Finish database structure"
+			},
+			{
+				"task": "Style boxes"
+			},
+		],
+		"what": "A single project page to help team members focus",
+		"why": "Project management software are overkill",
+		"whom": "Web startups",
+		"links": [
+			{
+				"name": "Wunderlist",
+				"url": "https://www.wunderlist.com/webapp#/start/lists/inbox",
+			},
+			{
+				"name": "Slack",
+				"url": "https://slack.com/create/3606148477-5c1a8443f9",
+			},
+		],
+	}
+]

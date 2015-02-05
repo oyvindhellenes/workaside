@@ -1,0 +1,61 @@
+GET wall:
+
+{
+	id: String,
+	name: String,
+	ioth: String,
+
+	gotw: String,
+
+	tbi: String,
+	why: String,
+	whom: String,
+}
+
+GET user: (logged in user info)
+
+{
+	id: String,
+	name: String,
+	gotd: String,
+	status: bool,
+}
+
+GET users: (all users)
+
+{
+	øyvind: {
+		id: String,
+		name: String,
+		gotd: String,
+		status: bool,
+		uptime:
+	},
+	tor: {
+		id: String,
+		name: String,
+		gotd: String,
+		status: bool,
+	}
+}
+
+Name:
+iotd - idea - goals - people
+
+"Get your shit together and focus"
+
+"screw your calender, this is where your head should be"
+
+"Tor is up and running at port:3000"
+
+"Tor is currently expirencing downtime, most likely due to maintainence"
+
+"don't worry of you miss your meeting because you shouldn't have them anyway"
+
+"fuck everything"
+
+link to:
+slack
+wunderlist
+
+
