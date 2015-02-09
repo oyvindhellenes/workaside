@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mean.system').controller('IndexController', ['$scope', 'Global','$resource','jsonService', function ($scope, Global, $resource, jsonService) {
+angular.module('mean.system').controller('IndexController', ['$scope', 'Global','$resource', function ($scope, Global, $resource) {
     
 	var User = $resource('/api/user');
     var Wall = $resource('/api/wall');
