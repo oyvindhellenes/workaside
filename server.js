@@ -40,6 +40,11 @@ app.post('/api/wall', wallController.create);
 // Get wall
 app.get('/api/wall', wallController.get);
 
+// Update wall
+app.delete('/api/wall', wallController.remove);
+
+// -----------------------------------------------
+
 // Post problem
 app.post('/api/problems', problemsController.create);
 

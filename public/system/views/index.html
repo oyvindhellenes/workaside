@@ -1,51 +1,111 @@
 <section data-ng-controller="IndexController">
     
-    <form ng-submit="addWall()">
-    <p>Project name: {{wall.value[0].name}}</p>
-    <input type="text" placeholder="Name" ng-model="wallElements.name">
+    <form ng-submit="addWall(); removeWall(wall.value)">
+        <h1 ng-click="show = !show" ng-show="!show">{{wallElements.name}}
+        </h1>
+        <h1>
+            <input type="text" ng-show="show" ng-model="wallElements.name">
+        </h1>
     <div>
 
         <div class="col-md-4">
             <div class="jumbotron" id="jumbo1">
                 <h2>Inspiration of the Day</h2>
-                <p>{{wall.value.iotd[0].name}}</p>
+                <div ng-click="show = !show" ng-show="!show">
+                    <p>1. {{wallElements.ioth[0].name}}</p>
+                    <p>2. {{wallElements.ioth[0].imageUrl}}</p>
+                    <p>3. {{wallElements.ioth[0].qoute}}</p>
+                </div>
+                <div ng-show="show">
+                    <p>
+                        1. <input type="text" ng-model="wallElements.ioth[0].name">
+                    </p>
+                    <p>
+                        2. <input type="text" ng-model="wallElements.ioth[0].imageUrl">
+                    </p>
+                    <p>
+                        3. <input type="text" ng-model="wallElements.ioth[0].qoute">
+                    </p>
+                </div>
             </div>
-            <input type="text" placeholder="Submit a problem" ng-model="wallElements.iotd[0].name">
         </div>
         <div class="col-md-4">
             <div class="jumbotron" id="jumbo2">
                 <h2>links</h2>
-                <p>{{wall.value.links[0]}}</p>
+                <div ng-click="show = !show" ng-show="!show">
+                    <p>1. {{wallElements.links[0].url}}</p>
+                    <p>2. {{wallElements.links[1].url}}</p>
+                    <p>3. {{wallElements.links[2].url}}</p>
+                </div>
+                <div ng-show="show">
+                    <p>
+                        1. <input type="text" ng-model="wallElements.links[0].url">
+                    </p>
+                    <p>
+                        2. <input type="text" ng-model="wallElements.links[1].url">
+                    </p>
+                    <p>
+                        3. <input type="text" ng-model="wallElements.links[2].url">
+                    </p>
+                </div>
             </div>
-            <input type="text" placeholder="Submit a problem" ng-model="wallElements.links[0].name">
         </div>
         <div class="col-md-4">
             <div class="jumbotron" id="jumbo3">
                 <h2>Why</h2>
-                <p>{{wall.value.why}}</p>
+                <p ng-click="show = !show" ng-show="!show">{{wallElements.why}}</p>
+                <p>
+                    <input type="text" ng-show="show" ng-model="wallElements.why">
+                </p>
             </div>
-            <input type="text" placeholder="Submit a problem" ng-model="wallElements.why">
         </div>
     </div>
     <div>
 
-        <div class="col-md-8">
+        <div class="col-md-4">
             <div class="jumbotron" id="jumbo4">
                 <h2>What</h2>
-                <p>{{wall.value.what}}</p>
+                <p ng-click="show = !show" ng-show="!show">{{wallElements.what}}</p>
+                <p>
+                    <input type="text" ng-show="show" ng-model="wallElements.what">
+                </p>
             </div>
-            <input type="text" placeholder="Submit a problem" ng-model="wallElements.what">
         </div>
         <div class="col-md-4">
             <div class="jumbotron" id="jumbo5">
                 <h2>Goal of the Week</h2>
-                <p>{{wall.value.gotw[0].name}}</p>
+                <div ng-click="show = !show" ng-show="!show">
+                    <p>1. {{wallElements.gotw[0].task}}</p>
+                    <p>2. {{wallElements.gotw[1].task}}</p>
+                    <p>3. {{wallElements.gotw[2].task}}</p>
+                </div>
+                <div ng-show="show">
+                    <p>
+                        1. <input type="text" ng-model="wallElements.gotw[0].task">
+                    </p>
+                    <p>
+                        2. <input type="text" ng-model="wallElements.gotw[1].task">
+                    </p>
+                    <p>
+                        3. <input type="text" ng-model="wallElements.gotw[2].task">
+                    </p>
+                </div>
             </div>
-            <input type="text" placeholder="Submit a problem" ng-model="wallElements.gotw[0].task">
+        </div>        
+        <div class="col-md-4">
+            <div class="jumbotron" id="jumbo5">
+                <h2>Whom</h2>
+                <p ng-click="show = !show" ng-show="!show">{{wallElements.whom}}</p>
+                <p>
+                    <input type="text" ng-show="show" ng-model="wallElements.whom">
+                </p>
+            </div>
         </div>
+        
+        
     </div>
     <div>
-        <button type="submit">Add</button>
+        <button ng-show="false" type="submit">Update</button>
     </div>
     </form> 
 

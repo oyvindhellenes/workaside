@@ -49,10 +49,25 @@ li {
     list-style-type: none;
 }
 
-#jumbo1 {
-    height: 500px;
+.jumbotron {
+    padding: 10px !important;
 }
 
+#jumbo1 {
+    height: 250px;
+}
+#jumbo2 {
+    height: 250px;
+}
+#jumbo3 {
+    height: 250px;
+}
 #jumbo4 {
+    height: 250px;
+}
+#jumbo5 {
+    height: 250px;
+}
+#jumbo6 {
     height: 250px;
 }
