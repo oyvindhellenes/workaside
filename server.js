@@ -34,14 +34,24 @@ exports = module.exports = app;
 
 // API
 
+
 // Create new wall
 app.post('/api/wall', wallController.create);
 
 // Get wall
 app.get('/api/wall', wallController.get);
 
+// Get wall by id
+app.get('/api/wall/:id', wallController.getById);
+
+// 
+app.post('/api/wall/:id', wallController.update);
+
 // Update wall
 app.delete('/api/wall', wallController.remove);
+
+
+// 
 
 // -----------------------------------------------
 

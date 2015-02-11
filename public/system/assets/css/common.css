@@ -49,25 +49,19 @@ li {
     list-style-type: none;
 }
 
+body {
+    background: url("/public/system/assets/img/canyon.jpg") no-repeat fixed center;
+    background-size: 1500px auto;
+
+}
+
 .jumbotron {
     padding: 10px !important;
 }
 
-#jumbo1 {
+#jumbo {
     height: 250px;
+    opacity: 0.8;
 }
-#jumbo2 {
-    height: 250px;
-}
-#jumbo3 {
-    height: 250px;
-}
-#jumbo4 {
-    height: 250px;
-}
-#jumbo5 {
-    height: 250px;
-}
-#jumbo6 {
-    height: 250px;
-}
+
+

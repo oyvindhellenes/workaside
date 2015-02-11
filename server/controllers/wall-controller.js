@@ -11,25 +11,28 @@ module.exports.create = function(req, res){
 }
 
 module.exports.get = function(req, res) {
+
 	Wall.find({}, function (err, results){
 		res.json(results);
 	});
+
 }
 
-// exports.update = function(req, res) {
+module.exports.getById = function(req, res) {
 
-//   var wall = req.goal;
-//   wall = _.extend(wall, req.body);
+	Wall.find({_id: req.params.id}, function (err, results){
+		res.json(results);
+	});
+	
+}
 
-//   wall.save(function(err) {
-//     if (err) {
-//       return res.status(500).json({
-//         error: 'Cannot update the wall'
-//       });
-//     }
-//     res.json(wall);
-//   });
-// };
+module.exports.update = function(req, res) {
+	
+	Wall.update({_id: req.params.id}, req.body, { multi: true }, function(err, results){
+		res.json(results);
+	});
+};
+
 module.exports.remove = function(req, res) {
 
 	Wall.find({}, function (err, results) {
