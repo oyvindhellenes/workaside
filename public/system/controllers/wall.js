@@ -10,7 +10,6 @@ angular.module('mean.system').controller('WallController', ['$scope', 'Global','
 
 	Wall.query(function (results) {
 
-        console.log('res '+ angular.toJson(results));
         $scope.wallElements = {
             name: results[results.length-1].name,
             what: results[results.length-1].what,
@@ -32,7 +31,7 @@ angular.module('mean.system').controller('WallController', ['$scope', 'Global','
             ],
             ioth: [
                 {
-                    name: "",
+                    name: " ",
                     imageUrl: "",
                     qoute: ""
                 }
@@ -64,24 +63,26 @@ angular.module('mean.system').controller('WallController', ['$scope', 'Global','
             };
         }
 
-        if (typeof results[results.length-1].ioth[0].name != undefined) {
-            $scope.wallElements.ioth[0].name = results[results.length-1].ioth[0].name
-        }        
-        if (typeof results[results.length-1].ioth[0].imageUrl != undefined) {
-            $scope.wallElements.ioth[0].imageUrl = results[results.length-1].ioth[0].imageUrl
-        }        
-        if (typeof results[results.length-1].ioth[0].qoute != undefined) {
-            $scope.wallElements.ioth[0].qoute = results[results.length-1].ioth[0].qoute
-        }
-        if (!results[results.length-1].name){
-            $scope.wallElements.name = "Project Name";
-        }
+        if (results[results.length-1].ioth[0]) {
+
+            if (typeof results[results.length-1].ioth[0].name != undefined) {
+                $scope.wallElements.ioth[0].name = results[results.length-1].ioth[0].name
+            }        
+            if (typeof results[results.length-1].ioth[0].imageUrl != undefined) {
+                $scope.wallElements.ioth[0].imageUrl = results[results.length-1].ioth[0].imageUrl
+            }        
+            if (typeof results[results.length-1].ioth[0].qoute != undefined) {
+                $scope.wallElements.ioth[0].qoute = results[results.length-1].ioth[0].qoute
+            }
+            if (!results[results.length-1].name){
+                $scope.wallElements.name = "Project Name";
+            }
+        };
 
 
 	});
 
     $scope.global = Global;
-
 
     $scope.updateWall = function(){
     	var wall = new Wall();
@@ -98,7 +99,6 @@ angular.module('mean.system').controller('WallController', ['$scope', 'Global','
             console.log('res' + angular.toJson(res));
         });
 
-        console.log('test' + angular.toJson($scope.wallElements));
         $scope.show = false;
     }
 
