@@ -24,14 +24,13 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
         var wall = new Wall();
         wall.name = $scope.wall.name;
             
-        wall.$save(function (req, res){
-            // Do something
+        wall.$save().then(function(res){
+            $scope.walls.value.push(res);
         });
     }
 
     $scope.remove = function(w){
-        console.log('id' + w._id);
-        console.log('length2' + $scope.walls.value.length);
+
         var wall = new Wall();
         wall.$delete(w).then(function(results){
             for (var i in $scope.walls.value) {

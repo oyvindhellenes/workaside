@@ -5,7 +5,7 @@
 
         <ul>
             <li ng-repeat="wall in walls.value">
-                <a ui-sref="wall({id: wall._id})">{{wall._id}} </a><span class="glyphicon glyphicon-remove" ng-click="remove(wall)"></span>
+                <a ui-sref="wall({id: wall._id})">{{wall.name}} </a><span class="glyphicon glyphicon-remove" ng-click="remove(wall)"></span>
             </li>
         </ul>
         <br>
