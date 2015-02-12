@@ -35,18 +35,7 @@ module.exports.update = function(req, res) {
 
 module.exports.remove = function(req, res) {
 
-	Wall.find({}, function (err, results) {
-		for (i in results){
-
-			if (results[i].id == req.query._id) {
-				results[i].remove(function (err){
-					if (!err) {
-					    console.log("removed");
-					} else {
-					    console.log(err);
-					}
-				})
-			};
-		}
+	Wall.remove({_id: req.query._id}, function(err, results){
+		res.json(results);
 	});
 }

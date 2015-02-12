@@ -102,12 +102,5 @@ angular.module('mean.system').controller('WallController', ['$scope', 'Global','
         $scope.show = false;
     }
 
-    // $scope.removeWall = function(w){
-    //     if (w.length > 1) {
-    //         var wall = new Wall();
-    //         wall.$delete(w[0]);           
-    //     };
-    // }
-
 
 }]);
